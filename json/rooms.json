@@ -1,10 +1,16 @@
 [
   {
-    "id": "1",
-    "name": "100"
+    "id": "room1",
+    "name": "Programming Lab",
+    "type": "Laboratory",
+    "computerCount": 30,
+    "availableSoftware": ["Visual Studio", "Unity", "Blender"]
   },
   {
-    "id": "2",
-    "name": "101"
+    "id": "room2",
+    "name": "Main Lecture Hall",
+    "type": "Classroom",
+    "capacity": 100,
+    "hasProjector": true
   }
 ]
