@@ -8,7 +8,7 @@
   },
   {
     "id": "room2",
-    "name": "Main Lecture Hall",
+    "name": "Lecture Hall",
     "type": "Classroom",
     "capacity": 100,
     "hasProjector": true
