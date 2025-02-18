@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/TheMidnightRambler/pevs-kiosk-data/refs/heads/main/yaml/schemas/rooms.schema.json
 rooms:
   - id: cl01
     type: Classroom
