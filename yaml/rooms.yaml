@@ -1,0 +1,80 @@
+rooms:
+  - id: cl01
+    type: Classroom
+    name: "Classroom 101"
+    capacity: 24
+  
+  - id: pc01
+    type: ComputerLab
+    name: "Computer Lab A"
+    capacity: 24
+    computer_count: 12
+
+  - id: lb01
+    type: Laboratory
+    name: "Laboratory 1"
+    capacity: 20
+    equipment:
+      - "Oscilloscope"
+      - "Signal Generator"
+      - "Power Supply"
+
+  - id: au01
+    type: Auditorium
+    name: "Auditorium A"
+    capacity: 150
+
+  - id: of01
+    type: Office
+    name: "Office 201"
+    people:
+      - "Dr. John Smith"
+      - "Dr. Jane Doe"
+
+  - id: sd01
+    type: StudyDepartment
+    name: "Study Department"
+    faculty: "Faculty of Information Technology"
+    people:
+      - "Alice Johnson"
+      - "Bob Wilson"
+    hours:
+      open: "9:00"
+      close: "15:00"
+    contact: "+420 123 456 789"
+
+  - id: de01
+    type: Deanery
+    name: "Dean's Office"
+    people:
+      - "Prof. Mark Dean"
+      - "Mrs. Sarah Secretary"
+    contact: "+420 123 456 790"
+
+  - id: cn01
+    type: Canteen
+    name: "Main Canteen"
+    hours:
+      open: "7:30"
+      close: "16:00"
+
+  - id: ch01
+    type: Clubhouse
+    name: "Student Club"
+    hours:
+      open: "16:00"
+      close: "22:00"
+
+  - id: li01
+    type: Library
+    name: "Central Library"
+    hours:
+      open: "8:00"
+      close: "20:00"
+
+  - id: wc01
+    type: WC
+    gender: "male"
+
+  - id: em01
+    type: Empty
