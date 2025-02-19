@@ -1,39 +1,33 @@
 rooms:
   - !classroom
     id: cl01
-    type: Classroom
     name: "Classroom 101"
     capacity: 24
 
   - !computerlab
     id: pc01
-    type: ComputerLab
     name: "Computer Lab 1"
     capacity: 20
     computer_count: 20
 
   - !laboratory
     id: lb01
-    type: Laboratory
     name: "Physics Lab"
     capacity: 15
     equipment: ["oscilloscope", "laser", "spectroscope"]
 
   - !auditorium
     id: au01
-    type: Auditorium
     name: "Main Auditorium"
     capacity: 200
 
   - !office
     id: of01
-    type: Office
     name: "Faculty Office"
     people: ["Dr. Smith", "Dr. Johnson"]
 
   - !studydepartment
     id: sd01
-    type: StudyDepartment
     name: "CS Department"
     faculty: "Faculty of Informatics"
     people: ["Dr. Brown", "Mrs. White"]
@@ -44,14 +38,12 @@ rooms:
 
   - !deanery
     id: de01
-    type: Deanery
     name: "Dean's Office"
     people: ["Dean Williams", "Secretary Davis"]
     contact: "+420987654321"
 
   - !canteen
     id: ca01
-    type: Canteen
     name: "Main Cafeteria"
     hours:
       open: "11:00"
@@ -59,7 +51,6 @@ rooms:
 
   - !clubhouse
     id: ch01
-    type: Clubhouse
     name: "Student Club"
     hours:
       open: "14:00"
@@ -67,7 +58,6 @@ rooms:
 
   - !library
     id: li01
-    type: Library
     name: "Central Library"
     hours:
       open: "08:00"
@@ -75,9 +65,7 @@ rooms:
 
   - !wc
     id: wc01
-    type: WC
     gender: "male"
 
   - !empty
     id: em01
-    type: Empty
