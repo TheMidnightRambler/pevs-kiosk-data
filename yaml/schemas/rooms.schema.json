@@ -8,22 +8,20 @@
         "oneOf": [
           {
             "type": "object",
-            "required": ["!classroom", "id", "type", "name", "capacity"],
+            "required": ["!classroom", "id", "name", "capacity"],
             "properties": {
               "!classroom": { "type": "null" },
               "id": { "type": "string", "pattern": "^cl[0-9]{2}$" },
-              "type": { "const": "Classroom" },
               "name": { "type": "string" },
               "capacity": { "type": "integer", "minimum": 1 }
             }
           },
           {
             "type": "object",
-            "required": ["!computerlab", "id", "type", "name", "capacity", "computer_count"],
+            "required": ["!computerlab", "id", "name", "capacity", "computer_count"],
             "properties": {
               "!computerlab": { "type": "null" },
               "id": { "type": "string", "pattern": "^pc[0-9]{2}$" },
-              "type": { "const": "ComputerLab" },
               "name": { "type": "string" },
               "capacity": { "type": "integer", "minimum": 1 },
               "computer_count": { "type": "integer", "minimum": 1 }
@@ -31,11 +29,10 @@
           },
           {
             "type": "object",
-            "required": ["!laboratory", "id", "type", "name", "capacity", "equipment"],
+            "required": ["!laboratory", "id", "name", "capacity", "equipment"],
             "properties": {
               "!laboratory": { "type": "null" },
               "id": { "type": "string", "pattern": "^lb[0-9]{2}$" },
-              "type": { "const": "Laboratory" },
               "name": { "type": "string" },
               "capacity": { "type": "integer", "minimum": 1 },
               "equipment": { 
@@ -46,7 +43,7 @@
           },
           {
             "type": "object",
-            "required": ["!auditorium", "id", "type", "name", "capacity"],
+            "required": ["!auditorium", "id", "name", "capacity"],
             "properties": {
               "!auditorium": { "type": "null" },
               "id": { "type": "string", "pattern": "^au[0-9]{2}$" },
@@ -57,11 +54,10 @@
           },
           {
             "type": "object",
-            "required": ["!office", "id", "type", "name", "people"],
+            "required": ["!office", "id", "name", "people"],
             "properties": {
               "!office": { "type": "null" },
               "id": { "type": "string", "pattern": "^of[0-9]{2}$" },
-              "type": { "const": "Office" },
               "name": { "type": "string" },
               "people": {
                 "type": "array",
@@ -71,11 +67,10 @@
           },
           {
             "type": "object",
-            "required": ["!studydepartment", "id", "type", "name", "faculty", "people", "contact", "hours"],
+            "required": ["!studydepartment", "id", "name", "faculty", "people", "contact", "hours"],
             "properties": {
               "!studydepartment": { "type": "null" },
               "id": { "type": "string", "pattern": "^sd[0-9]{2}$" },
-              "type": { "const": "StudyDepartment" },
               "name": { "type": "string" },
               "faculty": { "type": "string" },
               "people": {
@@ -95,11 +90,10 @@
           },
           {
             "type": "object",
-            "required": ["!deanery", "id", "type", "name", "people", "contact"],
+            "required": ["!deanery", "id", "name", "people", "contact"],
             "properties": {
               "!deanery": { "type": "null" },
               "id": { "type": "string", "pattern": "^de[0-9]{2}$" },
-              "type": { "const": "Deanery" },
               "name": { "type": "string" },
               "people": {
                 "type": "array",
@@ -110,11 +104,10 @@
           },
           {
             "type": "object",
-            "required": ["!canteen", "id", "type", "name", "hours"],
+            "required": ["!canteen", "id", "name", "hours"],
             "properties": {
               "!canteen": { "type": "null" },
               "id": { "type": "string", "pattern": "^ca[0-9]{2}$" },
-              "type": { "const": "Canteen" },
               "name": { "type": "string" },
               "hours": {
                 "type": "object",
@@ -146,11 +139,10 @@
           },
           {
             "type": "object",
-            "required": ["!library", "id", "type", "name", "hours"],
+            "required": ["!library", "id", "name", "hours"],
             "properties": {
               "!library": { "type": "null" },
               "id": { "type": "string", "pattern": "^li[0-9]{2}$" },
-              "type": { "const": "Library" },
               "name": { "type": "string" },
               "hours": {
                 "type": "object",
@@ -164,21 +156,19 @@
           },
           {
             "type": "object",
-            "required": ["!wc", "id", "type", "gender"],
+            "required": ["!wc", "id", "gender"],
             "properties": {
               "!wc": { "type": "null" },
               "id": { "type": "string", "pattern": "^wc[0-9]{2}$" },
-              "type": { "const": "WC" },
               "gender": { "enum": ["male", "female"] }
             }
           },
           {
             "type": "object",
-            "required": ["!empty", "id", "type"],
+            "required": ["!empty", "id"],
             "properties": {
               "!empty": { "type": "null" },
               "id": { "type": "string", "pattern": "^em[0-9]{2}$" },
-              "type": { "const": "Empty" }
             }
           }
         ]
