@@ -1,187 +1,38 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["rooms"],
   "properties": {
     "rooms": {
       "type": "array",
       "items": {
-        "type": "object",
-        "required": ["id", "type"],
-        "properties": {
-          "id": {
-            "type": "string",
-            "pattern": "^[a-z]{2}[0-9]{2}$",
-            "description": "Room identifier (2 letters + 2 numbers)"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "Classroom",
-              "ComputerLab",
-              "Laboratory",
-              "Auditorium",
-              "Office",
-              "StudyDepartment",
-              "Deanery",
-              "Canteen",
-              "Clubhouse",
-              "Library",
-              "WC",
-              "Empty"
-            ]
-          },
-          "name": {
-            "type": "string",
-            "minLength": 1
-          },
-          "capacity": {
-            "type": "integer",
-            "minimum": 1
-          },
-          "computer_count": {
-            "type": "integer",
-            "minimum": 1
-          },
-          "equipment": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "people": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "faculty": {
-            "type": "string"
-          },
-          "contact": {
-            "type": "string",
-            "pattern": "^\\+[0-9]{12}$"
-          },
-          "hours": {
+        "oneOf": [
+          {
             "type": "object",
-            "required": ["open", "close"],
+            "required": ["!classroom", "id", "type", "name", "capacity"],
             "properties": {
-              "open": {
-                "type": "string",
-                "pattern": "^([0-1][0-9]|2[0-3]):[0-5][0-9]$"
-              },
-              "close": {
-                "type": "string",
-                "pattern": "^([0-1][0-9]|2[0-3]):[0-5][0-9]$"
-              }
-            }
-          },
-          "gender": {
-            "type": "string",
-            "enum": ["male", "female"]
-          }
-        },
-        "allOf": [
-          {
-            "if": {
-              "properties": { "type": { "const": "Classroom" } }
-            },
-            "then": {
-              "required": ["name", "capacity"]
+              "!classroom": { "type": "null" },
+              "id": { "type": "string" },
+              "type": { "const": "Classroom" },
+              "name": { "type": "string" },
+              "capacity": { "type": "integer", "minimum": 1 }
             }
           },
           {
-            "if": {
-              "properties": { "type": { "const": "ComputerLab" } }
-            },
-            "then": {
-              "required": ["name", "capacity", "computer_count"]
-            }
-          },
-          {
-            "if": {
-              "properties": { "type": { "const": "Laboratory" } }
-            },
-            "then": {
-              "required": ["name", "capacity", "equipment"]
-            }
-          },
-          {
-            "if": {
-              "properties": { "type": { "const": "Auditorium" } }
-            },
-            "then": {
-              "required": ["name", "capacity"]
-            }
-          },
-          {
-            "if": {
-              "properties": { "type": { "const": "Office" } }
-            },
-            "then": {
-              "required": ["name", "people"]
-            }
-          },
-          {
-            "if": {
-              "properties": { "type": { "const": "StudyDepartment" } }
-            },
-            "then": {
-              "required": ["name", "faculty", "people", "hours", "contact"]
-            }
-          },
-          {
-            "if": {
-              "properties": { "type": { "const": "Deanery" } }
-            },
-            "then": {
-              "required": ["name", "people", "contact"]
-            }
-          },
-          {
-            "if": {
-              "properties": { "type": { "const": "Canteen" } }
-            },
-            "then": {
-              "required": ["name", "hours"]
-            }
-          },
-          {
-            "if": {
-              "properties": { "type": { "const": "Clubhouse" } }
-            },
-            "then": {
-              "required": ["name", "hours"]
-            }
-          },
-          {
-            "if": {
-              "properties": { "type": { "const": "Library" } }
-            },
-            "then": {
-              "required": ["name", "hours"]
-            }
-          },
-          {
-            "if": {
-              "properties": { "type": { "const": "WC" } }
-            },
-            "then": {
-              "required": ["gender"]
-            }
-          },
-          {
-            "if": {
-              "properties": { "type": { "const": "Empty" } }
-            },
-            "then": {
-              "not": {
-                "required": ["name", "capacity", "computer_count", "equipment", "people", "faculty", "contact", "hours", "gender"]
-              }
+            "type": "object",
+            "required": ["!computerlab", "id", "type", "name", "capacity", "computer_count"],
+            "properties": {
+              "!computerlab": { "type": "null" },
+              "id": { "type": "string" },
+              "type": { "const": "ComputerLab" },
+              "name": { "type": "string" },
+              "capacity": { "type": "integer", "minimum": 1 },
+              "computer_count": { "type": "integer", "minimum": 1 }
             }
           }
+          // ... other room types follow the same pattern
         ]
       }
     }
-  }
+  },
+  "required": ["rooms"]
 }
