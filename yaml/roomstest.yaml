@@ -1,11 +1,11 @@
 rooms:
   - !classroom
     id: cl01
-    name: "Classroom 101"
+    name: "101"
     capacity: 24
 
   - !computerlab
     id: pc01
-    name: "Computer Lab 1"
+    name: "201"
     capacity: 20
     computer_count: 20
