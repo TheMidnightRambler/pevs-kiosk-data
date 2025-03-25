@@ -32,9 +32,7 @@ rooms:
     faculty: "Faculty of Informatics"
     people: ["Dr. Brown", "Mrs. White"]
     contact: "+420123456789"
-    hours:
-      open: "08:00"
-      close: "16:00"
+    hours: "08:00 - 12:00"
 
   - !deanery
     id: de01
@@ -45,23 +43,17 @@ rooms:
   - !canteen
     id: ca01
     name: "Main Cafeteria"
-    hours:
-      open: "11:00"
-      close: "14:00"
+    hours: "08:00 - 12:00"
 
   - !clubhouse
     id: ch01
     name: "Student Club"
-    hours:
-      open: "14:00"
-      close: "22:00"
+    hours: "08:00 - 12:00"
 
   - !library
     id: li01
     name: "Central Library"
-    hours:
-      open: "08:00"
-      close: "20:00"
+    hours: "08:00 - 12:00"
 
   - !wc
     id: wc01
