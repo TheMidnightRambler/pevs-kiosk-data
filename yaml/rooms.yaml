@@ -24,7 +24,7 @@ rooms:
   - !office
     id: of01
     name: "Faculty Office"
-    people: ["Dr. Smith", "Dr. Johnson"]
+    people: ["001", "002"]
 
   - !studydepartment
     id: sd01
