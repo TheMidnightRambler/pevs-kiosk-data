@@ -1,0 +1,31 @@
+persons:
+  "001":
+    id: "001"
+    name: "John Smith"
+  "002":
+    id: "002"
+    name: "Emma Johnson"
+  "003":
+    id: "003"
+    name: "Michael Davis"
+  "004":
+    id: "004"
+    name: "Sarah Wilson"
+  "005":
+    id: "005"
+    name: "David Martinez"
+  "006":
+    id: "006"
+    name: "Jennifer Taylor"
+  "007":
+    id: "007"
+    name: "James Bond"
+  "008":
+    id: "008"
+    name: "Patricia Brown"
+  "009":
+    id: "009"
+    name: "Robert Anderson"
+  "010":
+    id: "010"
+    name: "Elizabeth Thomas"
