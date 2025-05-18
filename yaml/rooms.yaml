@@ -2,7 +2,7 @@ rooms:
   - !classroom
     id: cl01
     name: "Classroom 101"
-    capacity: 24
+    capacity: 25
 
   - !computerlab
     id: pc01
